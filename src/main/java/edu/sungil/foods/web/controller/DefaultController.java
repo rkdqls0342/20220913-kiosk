@@ -37,7 +37,7 @@ public class DefaultController {
 			@RequestParam(value = "userBirthDt", required = true)String userBirthDt) {
 		
 		UserInfo userInfo =new UserInfo();
-		userInfo.setUserNo(userNo);
+		 userInfo.setUserNo(userNo);
 		userInfo.setUserNm(userNm);
 		userInfo.setUserBirthDt(userBirthDt);
 		
