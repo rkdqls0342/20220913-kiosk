@@ -12,5 +12,4 @@ public class UserInfo {
 		  return "userNo = " + this.userNo + ", userNm = " + this.userNm +", userBirthDt = " + this.userBirthDt;
 		  
 	  }
-
 }
