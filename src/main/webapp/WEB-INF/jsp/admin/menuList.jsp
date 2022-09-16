@@ -18,13 +18,36 @@
 		alert(prdNo);
 	}
 	function checkBtnsave(){ 
+		event.preventDefault();
 		msg="저장하시겠습니까?";
 		  if(confirm(msg)!=0){
 			alert("저장되었습니다.");
+			var form = $('#frmMenu')[0];
+			var paramData = new FormData(form);
+			
+			$.ajax({
+				url : '/admin/menu/add',
+				data : paramData,
+				method : 'post',
+				enctype : 'multipar/from-data',
+				contentType : false,
+				processData : false,
+				
+				success : function(data){
+					alert("성공");
+				},
+				error : function(data){
+					alert("에러");
+				},
+				complete : function(data){
+					console.log(data.responseText);
+				}
+			})
 		  }else {
 			alert("저장이 취소되었습니다");
 			return;
 		   }
+		  
 	}
 </script>
 

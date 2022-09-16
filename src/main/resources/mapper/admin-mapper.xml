@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="edu.sungil.foods.web.domain.AdminMapper">
+
+	<insert id="insertMenu" parameterType="edu.sungil.foods.web.domain.dto.MenuInfo">
+		INSERT INTO tb_menu
+		(	MENU_NM,
+			MENU_PRICE,
+			MENU_DESC,
+			MENU_STOCK_QTY,
+			MENU_DISP_YN,
+			MENU_IMG_NM) VALUES
+				(
+					#{MENU_NM},
+					#{MENU_PRICE},
+					#{MENU_DESC},
+					#{MENU_STOCK_QTY},
+					#{MENU_DISP_YN},
+					#{fileNm}
+				)
+    </insert>
+
+  
+</mapper> 
